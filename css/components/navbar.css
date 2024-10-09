@@ -1,0 +1,106 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: antiquewhite;
+}
+
+.navbar .navbar__content {
+    padding: 3rem 4rem 1rem;
+    display: flex;
+    justify-content: space-between; 
+}
+
+.navbar .navbar__content .navbar__links li {
+    display: inline-block;
+  }
+  
+  .navbar .navbar__content .navbar__links li:not(:last-of-type) {
+    margin-right: 2rem;
+  }
+  
+  .navbar .navbar__content .navbar__links a {
+    padding: 1rem;
+    display: inline-block;
+  }
+  
+  .navbar .navbar__content .navbar__links a:hover {
+    color: var(--tertiary-color);
+  }
+  
+  .navbar.active {
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar .navbar__content .navbar__mobile,
+  .navbar .navbar__content .navbar__mobile .mobile__links {
+    display: none;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .navbar .navbar__content .navbar__links {
+      display: none;
+    }
+  
+    .navbar .navbar__content .navbar__mobile {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar .navbar__content .navbar-logo {
+      margin-right: auto;
+      margin-top: 1%;
+      margin-left: 8%;
+    }
+
+    .navbar .navbar__content .navbar__mobile img {
+      width: 3.6rem;
+      height: 3.6rem;
+      margin-top: 2%;
+      margin-left: 1%;
+      cursor: pointer;
+    }
+  
+    .navbar .navbar__content .navbar__mobile.active .mobile__links li {
+      margin-right: 0;
+    }
+  
+    #close-icon{
+      z-index: 1000;
+    }
+
+    .navbar .navbar__content .mobile__links {
+      display: none; /* Escondido por padrão */
+      position: fixed;
+      top: 13%; /* Alinhado ao topo */
+      left: 90%; /* Alinhado à direita */
+      transform: translate(-50%, -50%); /* Centraliza o menu */
+      background-color: rgba(218, 116, 0, 0.8); /* Fundo semi-transparente */
+      z-index: 999; /* Certifique-se de que o menu esteja sobre outros elementos */
+      padding: 20px;  /* Adiciona um espaço interno */
+      border-radius: 8px; /* Bordas arredondadas para um visual mais suave */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+      display: flex;
+      flex-direction: column; /* Alinha os links verticalmente */
+    }
+    
+    .navbar .navbar__content .mobile__links.show {
+      display: flex; /* Exibe o menu quando a classe 'show' for aplicada */
+    }
+    
+    .navbar .navbar__content .mobile__links li {
+      margin-bottom: 1rem;
+    }
+    
+    .navbar .navbar__content .mobile__links li a {
+      color: #fff; /* Cor branca para os links */
+      font-size: 1.5rem;
+      text-decoration: none;
+    }
+    
+    .navbar .navbar__content .mobile__links li a:hover {
+      color: #ff5100; /* Cor de destaque ao passar o mouse */
+    }
+  }

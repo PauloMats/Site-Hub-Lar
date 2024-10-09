@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: var(--font-family);
+  }
+  
+  html {
+    font-size: 62.5%;
+  }
+  
+  .error-message {
+    display: none; /* Oculto por padrão */
+    padding: 10px;
+    margin: 0;
+    border: 1px solid red;
+    background-color: #f8d7da;
+    color: #721c24;
+    border-radius: 5px;
+    font-size: 18px;
+    position: fixed; /* Fixo para centralizar em relação à janela */
+    top: 50%; /* Centralizado verticalmente */
+    left: 50%; /* Centralizado horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste para centralizar */
+    z-index: 9999; /* Certifique-se de que a mensagem esteja acima de outros elementos */
+    max-width: 80%; /* Para evitar que a mensagem seja muito larga */
+    text-align: center; /* Centraliza o texto */
+  }
+  
+  .navbar img {
+    padding: 0;
+    margin-left: 2%;
+    width: 100px;
+    height: auto; /* mantém a proporção da imagem */
+    position: absolute; /* posiciona a imagem no canto superior */
+    top: 0;
+    left: 0;
+  }
+  
+  
+  body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 1.6rem;
+    margin-top: 15rem;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .skills {
+    background-color: var(--skills-bg);
+    color: var(--skills-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  h1 {
+    font-size: 6.4rem;
+    font-weight: 700;
+    color: var(--text-color2);
+  }
+  
+  h2 {
+    font-size: 4.8rem;
+    font-weight: 700;
+    color: var(--text-color-dark2);
+  }
+  
+  .secondary-title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--navbar-bg);
+    color: var(--navbar-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .navbar__links a {
+    color: var(--navbar-text);
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar__links a:hover {
+    color: var(--secondary-color);
+  }
+  
+  #theme-toggle-button {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  #theme-toggle-button:hover {
+    background-color: var(--dark-secondary-color);
+  }
+  
+  .tertiary-title {
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 4.5rem;
+    color: var(--secondary-color);
+  }
+  
+  p,
+  .p {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 3.5rem;
+  }
+  
+  p:not(:last-of-type),
+  .p:not(:last-of-type) {
+    margin-bottom: 2rem;
+  }
+  
+  .btn {
+    background-color: none;
+    border: none;
+    outline: none;
+    padding: 1rem 4rem;
+    display: inline-block;
+    border-radius: 0.5rem;
+  }
+  
+  .btn.btn-primary {
+    background-color: var(--dark-secondary-color);
+    color: var(--white);
+    font-weight: 400;
+    font-size: 1.4rem;
+  }
+  
+  .max-width {
+    width: 100%;
+    max-width: 120rem;
+    padding: 0 4rem;
+    margin: 0 auto;
+    margin-bottom: 26rem;
+  }
+  
+  .mb-0 {
+    margin-bottom: 0;
+  }
+  
+  .mb-s {
+    margin-bottom: 1rem;
+  }
+  
+  .mb-m {
+    margin-bottom: 2rem;
+  }
+  
+  .mb-l {
+    margin-bottom: 4rem;
+  }
+  
+  .mb-xl {
+    margin-bottom: 6rem;
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    html {
+      font-size: 60%;
+    }
+  
+    h1 {
+      font-size: 6rem;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    html {
+      font-size: 58%;
+    }
+  
+    .navbar__mobile {
+        position: relative;
+      }
+      
+      .burger {
+        position: absolute;
+        right: 0; /* Coloca o menu no lado direito */
+        top: 10px;
+        cursor: pointer;
+      }
+      
+      .mobile__links.show {
+        display: block; /* Mostra o menu quando ativado */
+        align-items: center;
+      }
+      
+      .close-icon {
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+  }
