@@ -87,7 +87,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #faebd7;
+    background-color: white;
     color: var(--navbar-text);
     transition: background-color 0.3s ease, color 0.3s ease;
   }
@@ -99,6 +99,14 @@
     transition: color 0.3s ease;
   }
   
+  .about__right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
   .navbar__links a:hover {
     color: var(--secondary-color);
   }
@@ -195,6 +203,11 @@
       font-size: 58%;
     }
   
+    .image-polaris{
+      width: 125%;
+      margin-left: -10%;
+    }
+
     .navbar.active {
       background-color: #faebd7;
       margin: 0;
@@ -216,12 +229,14 @@
       .mobile__links.show {
         display: block; /* Mostra o menu quando ativado */
         align-items: center;
+        margin-top: 10%;
+        margin-right: 10%;
       }
       
       #close-icon {
         cursor: pointer;
         position: absolute;
-        top: -40px;
+        top: -2rem;
         right: 10px;
       }
   }
