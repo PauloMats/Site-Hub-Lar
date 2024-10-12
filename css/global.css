@@ -87,7 +87,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: var(--navbar-bg);
+    background-color: #faebd7;
     color: var(--navbar-text);
     transition: background-color 0.3s ease, color 0.3s ease;
   }
@@ -195,6 +195,13 @@
       font-size: 58%;
     }
   
+    .navbar.active {
+      background-color: #faebd7;
+      margin: 0;
+      padding: 30px 0;
+      color: var(--text-color);
+    }
+
     .navbar__mobile {
         position: relative;
       }
@@ -202,7 +209,7 @@
       .burger {
         position: absolute;
         right: 0; /* Coloca o menu no lado direito */
-        top: 10px;
+        top: -15px;
         cursor: pointer;
       }
       
@@ -211,10 +218,10 @@
         align-items: center;
       }
       
-      .close-icon {
+      #close-icon {
         cursor: pointer;
         position: absolute;
-        top: 10px;
+        top: -40px;
         right: 10px;
       }
   }
