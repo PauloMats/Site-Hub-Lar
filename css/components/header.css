@@ -6,19 +6,10 @@ header {
     scroll-margin-top: 20rem;
   }
   
-  header .header__left {
-    max-width: 62rem;
-    flex: 1;
-  }
-  
-  header .header__left p {
-    margin-top: 2rem;
-    margin-bottom: 4rem;
-    max-width: 50rem;
-  }
-  
   header .header__right .header__image {
     position: relative;
+    display: flex;
+    justify-content: right;
     line-height: 0;
   }
   

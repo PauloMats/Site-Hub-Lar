@@ -9,7 +9,7 @@
   html {
     font-size: 62.5%;
   }
-  
+
   .error-message {
     display: none; /* Oculto por padrão */
     padding: 10px;
@@ -38,6 +38,10 @@
     left: 0;
   }
   
+  #second-text{
+    background-color: #ff5e00;
+    padding: 3%;
+  }
   
   body {
     font-family: var(--font-family);
@@ -51,7 +55,7 @@
   
   .skills {
     background-color: var(--skills-bg);
-    color: var(--skills-text);
+    color:white;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
   
@@ -136,7 +140,8 @@
   .p {
     font-weight: 400;
     font-size: 1.6rem;
-    line-height: 3.5rem;
+    color: black;
+    text-align: justify;
   }
   
   p:not(:last-of-type),
@@ -167,7 +172,15 @@
     margin: 0 auto;
     margin-bottom: 26rem;
   }
-  
+
+  .section-simple{
+    width: 100%;
+    max-width: 120rem;
+    padding: 0 4rem;
+    margin: 0 auto;
+    margin-bottom: 26rem;
+  }
+
   .mb-0 {
     margin-bottom: 0;
   }
@@ -225,7 +238,7 @@
       .burger {
         position: absolute;
         right: 0; /* Coloca o menu no lado direito */
-        top: -30px;
+        top: -5px;
         cursor: pointer;
         scale: 2;
       }
@@ -240,8 +253,7 @@
       #close-icon {
         cursor: pointer;
         position: absolute;
-        top: -30px;
-        right: 10px;
-        size: 20px;
+        top: -10px;
+        right: 4px;
       }
   }
