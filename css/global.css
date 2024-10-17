@@ -5,6 +5,83 @@
     scroll-behavior: smooth;
     font-family: var(--font-family);
   }
+
+  /* Adicionando animação para fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Adicionando animação aos botões */
+.btn {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease-in, transform 1.5s ease-in;
+}
+
+/* Adicionando animação de fade-in quando o botão aparece na tela */
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animações para textos e imagens */
+.fade-in-left {
+  opacity: 0;
+  animation: fadeInLeft 5s forwards;
+}
+
+.fade-in-right {
+  opacity: 0;
+  animation: fadeInRight 5s forwards;
+}
+
+/* Animação para imagens */
+img {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out, transform 1.5s ease;
+}
+
+
+img.fade-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Para quando os elementos entram na tela */
+[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
   
   html {
     font-size: 62.5%;
@@ -174,7 +251,6 @@
     font-weight: 400;
     font-size: 1.4rem;
     text-align: center;
-    margin-left: 35%;
   }
   
   .max-width {
@@ -255,6 +331,10 @@
         scale: 2;
       }
       
+      .canvas-section{
+        padding: 5%;
+      
+      }
       .mobile__links.show {
         display: block; /* Mostra o menu quando ativado */
         align-items: center;

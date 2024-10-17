@@ -51,3 +51,20 @@ document.querySelectorAll('.not-finished').forEach(function(element) {
     showError('Ops! Este recurso ainda não foi finalizado. Mas tenho certeza que o Desenvolvedor está trabalhando nisso! 😉')	;
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const elementsToAnimate = document.querySelectorAll('.btn, img, .fade-in-left, .fade-in-right');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.setAttribute('data-visible', true);
+        observer.unobserve(entry.target); // Para não observar novamente
+      }
+    });
+  }, { threshold: 0.2 });
+
+  elementsToAnimate.forEach(element => {
+    observer.observe(element);
+  });
+});
