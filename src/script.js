@@ -8,7 +8,7 @@ const mobileLinks = document.querySelector('.mobile__links');
 function iniciarConversa() {
   const nome = document.getElementById('nome').value;
   const mensagem = document.getElementById('mensagem').value;
-  const numero = '5515974043210'; // Número no formato internacional
+  const numero = '5515974043210'; 
   const texto = `Olá, meu nome é ${nome}. ${mensagem}`;
 
   const url = `https://api.whatsapp.com/send?phone=${numero}&text=${encodeURIComponent(texto)}`;

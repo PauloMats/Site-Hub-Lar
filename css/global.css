@@ -377,6 +377,26 @@ img.fade-in {
     html {
       font-size: 58%;
     }
+    .carousel-inner img {
+      max-width: 100%;
+      height: 100%;
+      margin: 0 auto; /* Centraliza a imagem */
+    }
+    .carousel-control-prev, .carousel-control-next {
+      width: 20%; /* Tamanho dos botões de controle */
+      top: 50%; /* Centraliza verticalmente */
+      transform: translateY(0);
+      
+    }
+  
+    /* Reposiciona os botões em relação à imagem */
+    .carousel-control-prev {
+      transform: translateX(65%);
+    }
+  
+    .carousel-control-next {
+      transform: translateX(-65%);
+    }
 
     .img-pix{
       width: 100%;
