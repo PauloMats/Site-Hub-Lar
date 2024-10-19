@@ -233,6 +233,7 @@ img.fade-in {
   
   .canvas-section{
    padding: 5%;
+   text-align: center;
   }
 
 
@@ -288,7 +289,41 @@ img.fade-in {
   .mb-xl {
     margin-bottom: 6rem;
   }
-  
+
+  .carousel-inner img {
+    max-width: 75%; /* Aju  ste conforme a necessidade */
+    height: 75%;
+    margin: 0 auto; /* Centraliza a imagem */
+  }
+
+  #projects{
+    background-color: #e9840031;
+    padding: 5%;
+  }
+
+  /* Ajusta os botões de controle do carrossel */
+  .carousel-control-prev, .carousel-control-next {
+    width: 20%; /* Tamanho dos botões de controle */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(0);
+    
+  }
+
+  /* Reposiciona os botões em relação à imagem */
+  .carousel-control-prev {
+    transform: translateX(60%);
+  }
+
+  .carousel-control-next {
+    transform: translateX(-60%);
+  }
+
+  .img-pix{
+    width: 50%;
+    margin-top: 5%;
+    margin-left: 25%;
+  }
+
   @media only screen and (max-width: 1024px) {
     html {
       font-size: 60%;
@@ -303,6 +338,14 @@ img.fade-in {
     html {
       font-size: 58%;
     }
+
+    .img-pix{
+      width: 100%;
+      margin-top: 5%;
+      margin-left: 0;
+      align-items: center;
+    }
+
     .description-reforma{
       width: 100%;
       text-align: justify;
