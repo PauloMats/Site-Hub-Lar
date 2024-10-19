@@ -247,9 +247,10 @@ img.fade-in {
   }
   
   .btn.btn-primary {
-    background-color: var(--dark-secondary-color);
+    background-color: #ff9102;
     color: var(--white);
-    font-weight: 400;
+    font-family: var(--font-family);
+    font-weight: 550;
     font-size: 1.4rem;
     text-align: center;
   }
@@ -291,8 +292,8 @@ img.fade-in {
   }
 
   .carousel-inner img {
-    max-width: 75%; /* Aju  ste conforme a necessidade */
-    height: 75%;
+    max-width: 50%; /* Aju  ste conforme a necessidade */
+    height: 50%;
     margin: 0 auto; /* Centraliza a imagem */
   }
 
@@ -301,6 +302,7 @@ img.fade-in {
     padding: 5%;
   }
 
+  
   /* Ajusta os botões de controle do carrossel */
   .carousel-control-prev, .carousel-control-next {
     width: 20%; /* Tamanho dos botões de controle */
@@ -311,13 +313,50 @@ img.fade-in {
 
   /* Reposiciona os botões em relação à imagem */
   .carousel-control-prev {
-    transform: translateX(60%);
+    transform: translateX(125%);
   }
 
   .carousel-control-next {
-    transform: translateX(-60%);
+    transform: translateX(-125%);
   }
 
+  .parceiros {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .div-parceiros {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .tertiary-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .parceiros-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .parceiros-list li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .parceiros-list img {
+    max-width: 150px;
+    max-height: 100px;
+    object-fit: contain;
+  }
+  
   .img-pix{
     width: 50%;
     margin-top: 5%;

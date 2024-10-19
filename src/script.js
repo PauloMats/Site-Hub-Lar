@@ -4,6 +4,18 @@ const menuIcon = document.getElementById('menu-icon');
 const closeIcon = document.getElementById('close-icon');
 const mobileLinks = document.querySelector('.mobile__links');
 
+// Função para iniciar uma conversa no WhatsApp
+function iniciarConversa() {
+  const nome = document.getElementById('nome').value;
+  const mensagem = document.getElementById('mensagem').value;
+  const numero = '5515974043210'; // Número no formato internacional
+  const texto = `Olá, meu nome é ${nome}. ${mensagem}`;
+
+  const url = `https://api.whatsapp.com/send?phone=${numero}&text=${encodeURIComponent(texto)}`;
+  window.open(url, '_blank');
+}
+
+
 // Alternar o menu ao clicar no ícone
 menuIcon.addEventListener('click', () => {
   mobileLinks.classList.toggle('show');
